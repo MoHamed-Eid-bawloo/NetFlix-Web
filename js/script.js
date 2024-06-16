@@ -166,14 +166,12 @@ const showGenres = async (media = 'movie') => {
   });
 };
 
-// Getting genres for media type on change;
 mediaTypeChange.forEach((media) => {
   media.addEventListener('change', () => {
     showGenres(media.dataset.media);
   });
 });
 
-// cards related
 const getMediaTitle = (result) => {
   if (result.title) return result.title;
   if (result.original_title) return result.original_title;
@@ -185,9 +183,7 @@ const showOnlyYear = (date) => {
   if (!date) return '';
   return date.split('-')[0];
 };
-// converting search to poster cards
 
-// converting genre ids to genres;
 const genreIdsToHtml = (genreArr) => {
   let markup = '';
   if (genreArr.length === 0)
@@ -482,11 +478,8 @@ searchInput.addEventListener('keyup', (e) => {
   }
 });
 
-// click trending
 trendingBtn.addEventListener('click', showTrending);
 
-// submitting search form
-// movie or tv
 const getMediaType = () => {
   let mediaX = '';
   mediaTypeChange.forEach((media) => {
@@ -515,8 +508,7 @@ const separateIds = (ids) => {
   }, '');
 };
 
-// use id,id === and
-// use id|id === or
+
 const showUserSelectedMedia = async (mediaType, ids, rating, pageNumber) => {
   // separate ids
   const separatedIds = separateIds(ids);
