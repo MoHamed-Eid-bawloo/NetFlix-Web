@@ -1,7 +1,6 @@
 'use strict';
 const API_KEY = '5d2b04e2bf5b9f6332a8ed8acde1f340';
 
-// requesting genres by type tv or movie;
 
 const listOfGenres = async (type) => {
   try {
@@ -17,7 +16,6 @@ const listOfGenres = async (type) => {
   }
 };
 
-// requesting top rated movies or tv shows, page number
 const searchTopRated = async (type = 'movie', pageNumber = 1) => {
   try {
     const x = await fetch(
@@ -32,7 +30,6 @@ const searchTopRated = async (type = 'movie', pageNumber = 1) => {
   }
 };
 
-// movies or tv shows by search value
 
 const searchByValue = async (type, searchVal, pageNumber = 1) => {
   try {
@@ -50,7 +47,6 @@ const searchByValue = async (type, searchVal, pageNumber = 1) => {
   }
 };
 
-// trending type - all/movies/tv  period - day/week
 
 const searchTrending = async (type = 'all', period = 'week') => {
   try {
@@ -66,10 +62,8 @@ const searchTrending = async (type = 'all', period = 'week') => {
   }
 };
 
-// search by genre (id) and type
 
-// use id,id === and
-// use id|id === or
+
 const searchByGenres = async (type, genreId, rating, pageNumber = 1) => {
   try {
     const x = await fetch(
@@ -85,7 +79,6 @@ const searchByGenres = async (type, genreId, rating, pageNumber = 1) => {
   }
 };
 
-// getting full poster url
 const getPoster = async (url, width = 500) => {
   if (!url) return `https://i.im.ge/2022/03/09/lyUsWa.png`;
   // poster with 500 width; + path;
