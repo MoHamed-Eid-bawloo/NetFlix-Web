@@ -599,14 +599,5 @@ const showTopRated = async () => {
     convertResultsToCards(result, 'movie');
   });
 };
-
-// #TODO
-
-// add favorite to selected card
-// same class on selected poster;
-
-// funcions on page start
-
-// get genres for default value;
 showGenres();
 showTopRated();
