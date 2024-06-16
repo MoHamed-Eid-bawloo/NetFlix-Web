@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Rokkitt:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/9588a8c772.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/script.js" defer type="module"></script>
+		<title>Movie App</title>
+	</head>
+	<body>
+		<!-- <div class="app__container"> -->
+
+		<nav class="left__nav">
+			<div class="nav__items">
+				<ul>
+					<li class="main__logo">
+						<div class="logo">
+							<img src="./images/logo.png" alt="logo" />
+						</div>
+					</li>
+					<li class="trends">
+						<i class="fas fa-sort-amount-up"></i>
+					</li>
+					<label for="movie__checkbox">
+						<li class="film__tv">
+							<input type="checkbox" id="movie__checkbox" />
+							<i class="fas fa-film"></i>
+						</li>
+					</label>
+					<li class="favorites__btn"><i class="fas fa-star"></i></li>
+					<li class="footer__btn">
+						<i class="fas fa-angle-down"></i>
+					</li>
+				</ul>
+			</div>
+			<!-- slide__left -->
+			<div class="sliding__menu slide__left">
+				<form action="">
+					<div class="media__container">
+						<h2 class="media__title">Search for:</h2>
+						<div class="media__type">
+							<label for="type__movie">
+								<input
+									class="media__radio"
+									type="radio"
+									name="media"
+									id="type__movie"
+									data-media="movie"
+									checked
+								/>
+								<div class="media__movie">MOVIE</div></label
+							>
+							<label for="type__tv">
+								<input
+									class="media__radio"
+									type="radio"
+									name="media"
+									id="type__tv"
+									data-media="tv"
+								/>
+								<div class="media__tv">TV</div></label
+							>
+						</div>
+					</div>
+					<h2 class="genres__title">Genres</h2>
+					<div class="genres__container"></div>
+					<h2 class="rating__title">RATING</h2>
+					<div class="rating__container">
+						<div class="range__name">
+							IMDB min <span class="imdb__value">5.5</span>
+						</div>
+						<input
+							type="range"
+							id="imdb__range"
+							min="1"
+							max="10"
+							step=".1"
+						/>
+					</div>
+					<div class="show__container">
+						<button class="btn__show" type="submit">Show</button>
+					</div>
+				</form>
+			</div>
+		</nav>
+		<div class="top__bar">
+			<div class="search__container">
+				<label for="search__check" class="search__label">
+					<input type="checkbox" id="search__check" />
+					<div class="search__input">
+						<div class="search__logo">
+							<img
+								src="./images/searchLogo2.svg"
+								alt="magnifying-glass"
+							/>
+						</div>
+					</div>
+				</label>
+				<input
+					type="text"
+					class="input__text no__opacity no__click"
+					placeholder="Search for Movies, Tv, etc."
+				/>
+			</div>
+		</div>
+		<div class="main__container">
+			<!-- display none -->
+			<div class="selected__card display__none no__opacity">
+				<!-- <div class="trailer__container">
+					<span class="selected__trailer--close"
+						><i class="fas fa-times"></i
+					></span>
+					<iframe
+						class="selected__trailer"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY"
+						frameborder="0"
+					></iframe>
+				</div> -->
+				<span class="selected__card--close"
+					><i class="fas fa-times"></i
+				></span>
+				<!-- <div class="selected__container">
+					<div class="selected__poster">
+						<img
+							class="selected__poster"
+							src="https:image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg"
+							alt="poster"
+						/>
+					</div>
+					<div class="selected__info">
+						<h3 class="selected__title">Movie Title</h3>
+						<div class="selected__date--genres">
+							<h2 class="selected__date">2012</h2>
+							<span class="circle"></span>
+							<div class="selected__genres">
+								<div class="selected__genre">Action</div>
+								<div class="selected__genre">Action</div>
+								<div class="selected__genre">Action</div>
+							</div>
+						</div>
+						<p class="selected__text">
+							Lorem, ipsum dolor sit amet consectetur adipisicing
+							elit. Atque perspiciatis voluptatum velit, ex
+							expedita amet voluptas, consequatur quaerat
+							veritatis modi mollitia quas. Odio, labore incidunt
+							earum architecto assumenda praesentium dolorum.
+						</p>
+					</div>
+				</div>
+				<div class="selected__play">
+					<div class="selected__rating-container">
+						<div class="selected__rating">
+							<span class="selected__imdb">Imdb</span>
+							<span class="selected__rating-value">4.4</span>
+						</div>
+					</div>
+					<button class="selected__play-btn">Play</button>
+				</div> -->
+			</div>
+			<div class="title">
+				<h1>Premium Streaming</h1>
+			</div>
+			<div class="main__content">
+				<h2 class="main__title">Top Rated Movies</h2>
+			</div>
+			<div class="card__container"></div>
+			<div class="pagebtn__container display__none">
+				<button class="prev__btn">Previous</button>
+				<span class="current__page">1</span>
+				<button class="nxt__btn">Next</button>
+			</div>
+		</div>
+		<footer>
+			<div class="author">
+				Made with <i class="fab fa-gratipay"></i> by
+				<span class="author__name">Mohamed Eid</span>
+			</div>
+		</footer>
+	</body>
+</html>
